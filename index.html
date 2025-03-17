@@ -46,6 +46,14 @@
         .navbar.scrolled {
             background: rgba(0, 0, 0, 0.8);
         }
+        .swiper-wrapper {
+        height: 100% !important;
+        margin: 0 auto;
+    }
+    .swiper-slide img {
+        height: 100%;
+        object-fit: cover;
+    }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -63,7 +71,7 @@
     </nav>
     
     <!-- Welcome Section with Image Slider -->
-    <section class="relative w-full h-screen">
+    <section class="relative w-full" style="height: 55vh;">
         <div class="swiper welcomeSwiper w-full h-full">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="https://redstoryfm.github.io/red-story-fm/assets/01.png" class="w-full h-full object-cover"></div>
@@ -76,13 +84,49 @@
     </section>
     
     <!-- Latest Podcasts Carousel -->
-    <section class="p-8">
-        <h2 class="text-2xl font-bold mb-4">Latest Podcasts</h2>
-        <div class="swiper latestPodcastsSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide bg-gray-800 p-4 rounded-lg">Podcast 1</div>
-                <div class="swiper-slide bg-gray-800 p-4 rounded-lg">Podcast 2</div>
-                <div class="swiper-slide bg-gray-800 p-4 rounded-lg">Podcast 3</div>
+    <section class="p-8 flex flex-wrap">
+        <!-- Left Column: Latest Podcasts Carousel -->
+        <div class="w-full md:w-1/2 p-4">
+            <h2 class="text-2xl font-bold mb-4">Latest Podcasts</h2>
+            <div class="swiper latestPodcastsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-gray-800 p-4 rounded-lg">
+                        <img src="https://redstoryfm.github.io/red-story-fm/assets/podcast1.png" alt="Podcast 1" class="w-full h-auto rounded-lg mb-2">
+                        <h3 class="text-xl font-bold">Podcast 1</h3>
+                        <p class="text-gray-400">Description of Podcast 1</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-800 p-4 rounded-lg">
+                        <img src="https://redstoryfm.github.io/red-story-fm/assets/podcast1.png" alt="Podcast 1" class="w-full h-auto rounded-lg mb-2">
+                        <h3 class="text-xl font-bold">Podcast 1</h3>
+                        <p class="text-gray-400">Description of Podcast 1</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-800 p-4 rounded-lg">
+                        <img src="https://redstoryfm.github.io/red-story-fm/assets/podcast1.png" alt="Podcast 1" class="w-full h-auto rounded-lg mb-2">
+                        <h3 class="text-xl font-bold">Podcast 1</h3>
+                        <p class="text-gray-400">Description of Podcast 1</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-800 p-4 rounded-lg">
+                        <img src="https://redstoryfm.github.io/red-story-fm/assets/podcast1.png" alt="Podcast 1" class="w-full h-auto rounded-lg mb-2">
+                        <h3 class="text-xl font-bold">Podcast 1</h3>
+                        <p class="text-gray-400">Description of Podcast 1</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-800 p-4 rounded-lg">
+                        <img src="https://redstoryfm.github.io/red-story-fm/assets/podcast1.png" alt="Podcast 1" class="w-full h-auto rounded-lg mb-2">
+                        <h3 class="text-xl font-bold">Podcast 1</h3>
+                        <p class="text-gray-400">Description of Podcast 1</p>
+                    </div>
+                    <div class="swiper-slide bg-gray-800 p-4 rounded-lg">
+                        <img src="https://redstoryfm.github.io/red-story-fm/assets/podcast1.png" alt="Podcast 1" class="w-full h-auto rounded-lg mb-2">
+                        <h3 class="text-xl font-bold">Podcast 1</h3>
+                        <p class="text-gray-400">Description of Podcast 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Column: Single Image Box -->
+        <div class="w-full md:w-1/2 p-4 flex items-center justify-center">
+            <div class="bg-gray-800 p-4 rounded-lg">
+                <img src="https://redstoryfm.github.io/red-story-fm/assets/single-image.png" alt="Single Image" class="w-full h-auto rounded-lg">
             </div>
         </div>
     </section>
