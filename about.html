@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Story FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.1.0/swiper-bundle.min.css">
+    <style>
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #fff;
+            color: #000;
+            width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        #chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: red;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: all 0.3s;
+            background: transparent;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- Navbar -->
+    <nav class="navbar text-white">
+        <h1 class="text-3xl font-bold">Red Story FM</h1>
+        <ul class="flex space-x-6">
+            <li><a href="#" class="hover:text-red-400">Home</a></li>
+            <li><a href="#" class="hover:text-red-400">Podcasts</a></li>
+            <li><a href="#" class="hover:text-red-400">Stories</a></li>
+            <li><a href="#" class="hover:text-red-400">Contact</a></li>
+        </ul>
+    </nav>
+
+<!--Section-->
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-6 text-center text-gray-400">
+        <p>&copy; 2025 Red Story FM. All rights reserved.</p>
+        <p><a href="#" class="hover:text-red-400">Privacy Policy</a> | <a href="#" class="hover:text-red-400">Terms of Service</a></p>
+    </footer>
+    
+    <!-- Chatbot -->
+    <div id="chatbot-toggle">💬</div>
+    <div id="chatbot">Chatbot coming soon...</div>
+    
+    <script>
+        document.getElementById("chatbot-toggle").addEventListener("click", function() {
+            var chatbot = document.getElementById("chatbot");
+            chatbot.style.display = chatbot.style.display === "none" ? "block" : "none";
+        });
+        
+        window.addEventListener("scroll", function() {
+            var navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+        
+        var welcomeSwiper = new Swiper(".welcomeSwiper", {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: { delay: 3000 }
+        });
+        
+        var latestPodcastsSwiper = new Swiper(".latestPodcastsSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 3000 }
+        });
+    </script>
+</body>
+</html>
